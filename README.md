@@ -45,19 +45,31 @@ In MySQL:
 CREATE DATABASE IF NOT EXISTS InternLink;
 ```
 
-4. Start the backend server
+4. Configure environment variables (recommended)
+
+Copy the example environment file and update credentials:
 
 ```bash
 cd InternLink-backend
-node server.js
+cp .env.example .env
+# Edit .env and set DB_PASS and other values as needed
 ```
 
-The backend listens on port `5000`.
+5. Start the backend server
 
-5. Start the frontend
+```bash
+cd InternLink-backend
+npm install
+npm start
+```
+
+The backend listens on the port set in `.env` (default `5000`).
+
+6. Start the frontend
 
 ```bash
 cd ../internlink-frontend
+npm install
 npm start
 ```
 
